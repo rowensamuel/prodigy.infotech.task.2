@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;900&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle at center, #0f0c29, #302b63, #24243e);
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  color: white;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(0,255,255,0.4);
+  backdrop-filter: blur(10px);
+}
+
+.neon-text {
+  font-size: 2rem;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+  animation: glowPulse 2s infinite alternate;
+}
+
+#display {
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+.glow-text {
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+  animation: glowPulse 1.5s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from { text-shadow: 0 0 5px #0ff, 0 0 15px #0ff; }
+  to { text-shadow: 0 0 20px #0ff, 0 0 40px #0ff; }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  font-size: 16px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.start {
+  background: linear-gradient(45deg, #00ff99, #00ccff);
+  color: black;
+}
+
+.pause {
+  background: linear-gradient(45deg, #ffcc00, #ff6600);
+  color: black;
+}
+
+.reset {
+  background: linear-gradient(45deg, #ff0066, #ff3300);
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #fff;
+}
